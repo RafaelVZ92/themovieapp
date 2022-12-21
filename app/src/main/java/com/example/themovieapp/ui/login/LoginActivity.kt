@@ -6,7 +6,7 @@ import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import com.example.appthemoviedb.MainActivity
+import com.example.appthemoviedb.MovieMainActivity
 import com.example.themovieapp.data.model.action.LoginActions
 import com.example.themovieapp.databinding.ActivityLoginBinding
 import com.example.themovieapp.viewmodel.LoginViewModel
@@ -48,7 +48,7 @@ class LoginActivity : AppCompatActivity(),
     private fun handleActions(actions: LoginActions) {
         when(actions){
             LoginActions.Success -> startActivity(
-                Intent(this, MainActivity::class.java)
+                Intent(this, MovieMainActivity::class.java)
             )
             LoginActions.Error -> {
                     Toast.makeText(
