@@ -1,5 +1,6 @@
 package com.example.themovieapp.di.components
 
+import com.example.appthemoviedb.di.components.AppComponent
 import com.example.themovieapp.InjectableApplication
 import com.example.themovieapp.di.BaseComponent
 import com.example.themovieapp.di.modules.ActivityBuilder
@@ -18,7 +19,8 @@ import javax.inject.Singleton
     ]
 )
 interface MainComponent:
-    BaseComponent {
+    BaseComponent,
+    AppComponent {
 
     @Component.Builder
     interface Builder {

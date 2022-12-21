@@ -1,10 +1,14 @@
 package com.example.themovieapp
 
+import com.example.appthemoviedb.di.AppComponentProvider
+import com.example.appthemoviedb.di.components.AppComponent
 import com.example.themovieapp.di.components.DaggerMainComponent
 import com.example.themovieapp.di.components.MainComponent
 
 
-class MainApplication : Application() {
+class MainApplication :
+    Application(),
+    AppComponentProvider {
 
     companion object {
         lateinit var instance: MainApplication
@@ -25,4 +29,6 @@ class MainApplication : Application() {
     }
 
     private fun getMainComponent() = component as MainComponent
+
+    override fun provideAppComponent() = getMainComponent()
 }

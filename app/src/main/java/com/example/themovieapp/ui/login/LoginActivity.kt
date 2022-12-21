@@ -1,10 +1,12 @@
 package com.example.themovieapp.ui.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import com.example.appthemoviedb.MainActivity
 import com.example.themovieapp.data.model.action.LoginActions
 import com.example.themovieapp.databinding.ActivityLoginBinding
 import com.example.themovieapp.viewmodel.LoginViewModel
@@ -45,12 +47,9 @@ class LoginActivity : AppCompatActivity(),
 
     private fun handleActions(actions: LoginActions) {
         when(actions){
-            LoginActions.Success ->  {
-                Toast.makeText(
-                    this@LoginActivity,
-                    "fields cannon be null",
-                    Toast.LENGTH_SHORT).show()
-            }
+            LoginActions.Success -> startActivity(
+                Intent(this, MainActivity::class.java)
+            )
             LoginActions.Error -> {
                     Toast.makeText(
                         this@LoginActivity,
@@ -60,7 +59,6 @@ class LoginActivity : AppCompatActivity(),
         }
     }
 
-    // getShowProgress().observe(viewLifecycleOwner, Observer(::showLoading))
     private fun configureLoginButton() {
         binding.buttonLogin?.setOnClickListener {
             binding.apply {
@@ -75,7 +73,7 @@ class LoginActivity : AppCompatActivity(),
                 } else {
                     Toast.makeText(
                         this@LoginActivity,
-                        "fields cannon be null",
+                        "Usuario no registrado",
                         Toast.LENGTH_SHORT).show()
                 }
             }
