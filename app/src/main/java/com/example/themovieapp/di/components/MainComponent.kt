@@ -1,6 +1,7 @@
 package com.example.themovieapp.di.components
 
 import com.example.appthemoviedb.di.components.AppComponent
+import com.example.network.wiring.impl.NetworkWiringModule
 import com.example.themovieapp.InjectableApplication
 import com.example.themovieapp.di.BaseComponent
 import com.example.themovieapp.di.modules.ActivityBuilder
@@ -15,7 +16,8 @@ import javax.inject.Singleton
     modules = [
         AndroidSupportInjectionModule::class,
         MainModule::class,
-        ActivityBuilder::class
+        ActivityBuilder::class,
+        NetworkWiringModule::class
     ]
 )
 interface MainComponent:

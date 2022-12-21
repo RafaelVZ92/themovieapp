@@ -1,0 +1,23 @@
+apply from:"$project.rootDir/gradle/android-library.gradle"
+
+android {
+    resourcePrefix 'network_'
+}
+
+dependencies {
+    implementation project(':network-api')
+
+    implementation(libs.dagger)
+
+    implementation(libs.rx.java)
+    implementation(libs.gson)
+
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.adapter.rxjava)
+
+    implementation(libs.okhttp)
+
+    testImplementation(libs.junit)
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+}

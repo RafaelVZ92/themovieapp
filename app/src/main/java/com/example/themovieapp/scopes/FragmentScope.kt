@@ -1,4 +1,4 @@
-package com.rappi.paycommon.di.scopes
+package com.example.themovieapp.scopes
 
 import javax.inject.Scope
 import kotlin.annotation.Retention

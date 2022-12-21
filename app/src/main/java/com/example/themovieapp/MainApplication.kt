@@ -1,7 +1,6 @@
 package com.example.themovieapp
 
 import com.example.appthemoviedb.di.AppComponentProvider
-import com.example.appthemoviedb.di.components.AppComponent
 import com.example.themovieapp.di.components.DaggerMainComponent
 import com.example.themovieapp.di.components.MainComponent
 

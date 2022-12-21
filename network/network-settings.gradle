@@ -1,0 +1,11 @@
+def rootDir = settingsDir
+def modulePrefix = ':'
+
+include modulePrefix + 'network-wiring-impl'
+project(modulePrefix + 'network-wiring-impl').projectDir = new File(rootDir, 'network/wiring-impl')
+
+include modulePrefix + 'network-impl'
+project(modulePrefix + 'network-impl').projectDir = new File(rootDir, 'network/impl')
+
+include modulePrefix + 'network-api'
+project(modulePrefix + 'network-api').projectDir = new File(rootDir, 'network/api')
