@@ -17,5 +17,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "TheMovieApp"
 include ':app'
-include ':the-moviedb'
+include ':moviedb'
 apply from: 'network/network-settings.gradle'

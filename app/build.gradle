@@ -42,7 +42,7 @@ android {
 }
 
 dependencies {
-    implementation project(':the-moviedb')
+    implementation project(':moviedb')
     implementation project(':network-wiring-impl')
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

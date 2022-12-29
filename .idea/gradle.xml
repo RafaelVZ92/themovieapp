@@ -11,10 +11,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/moviedb" />
             <option value="$PROJECT_DIR$/network/api" />
             <option value="$PROJECT_DIR$/network/impl" />
             <option value="$PROJECT_DIR$/network/wiring-impl" />
-            <option value="$PROJECT_DIR$/the-moviedb" />
           </set>
         </option>
       </GradleProjectSettings>
